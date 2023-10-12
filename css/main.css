@@ -23,7 +23,7 @@ div.more_info p {
     background-color: #aaf;
 
     display: inline-block;
-    flex-basis: 60%;
+    flex-basis: 50%;
     order: 0;
     flex-grow: 0;
     flex-shrink: 0;
@@ -32,13 +32,14 @@ div.more_info p {
     padding:10px;
 }
 
+/*оформление ссылок в элементах div класса more_info*/
 div.more_info a {
     border: 1px solid #000;
     background-color: #d88;
     border-radius: 10px;
     
     display: inline-block;
-    flex-basis: 20%;
+    flex-basis: 30%;
     order: 1;
     flex-grow: 0;
     flex-shrink: 0;
