@@ -1,0 +1,99 @@
+/*
+    Версии сайта:
+    1) широкая (по умолчанию) - применяется при ширине экрана от 1500 пикселей
+    2) обычная - применяется при ширине экрана 1001-1500 пикселей
+    3) сжатая - применяется при ширине экрана 600(?)-1000 пикселей
+    4) мобильная - применяется при ширине экрана до 600(?) пикселей
+*/
+
+/*установка размеров контейнера page-wrap*/
+div.page_wrap {
+    width: 1480px;
+    margin:10px auto;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    height:auto;
+}
+/*оптимизация page_wrap под устройства с экранами шириной меньше 1500 пикселей*/
+@media screen and (max-width: 1500px)
+{
+    div.page_wrap {
+        width:980px;
+    }
+}
+
+@media screen and (max-width: 1000px)
+{
+    div.page_wrap {
+        width:98%;
+    }
+}
+
+/*установка header-ов*/
+header {
+    width:60%;
+    height: auto;
+    min-height: 118px;
+    
+    display: block;
+    
+    position: sticky;
+    top:-10px;
+    z-index: 100;
+    
+    margin: 10px auto;
+    
+    border:3px solid #000;
+    border-radius:10px;
+
+    background-color: #fff;
+}
+
+/*установка main-ов*/
+main {
+    width:100%;
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+/*установка footer-ов*/
+footer {
+    border: 2px solid #000;
+    padding:20px;
+    border-radius: 10px;
+    width: 60%;
+    min-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+    overflow: auto;
+}
+
+/*описание рядов, используемых для выравнивания блоков контента в main*/
+div.row {
+    margin:10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+/*установка section по умолчанию*/
+section {
+    border: 2px solid #000;
+    background-color: #ddd;
+    padding:20px;
+    border-radius: 10px;
+    width: 60%;
+    margin: 0px 7px;
+    height: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: auto;
+}
