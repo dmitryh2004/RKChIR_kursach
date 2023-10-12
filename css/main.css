@@ -1,0 +1,58 @@
+/*Файл css для main.html*/
+div.more_info {
+    width:50%;
+    height: auto;
+
+    margin: 10px auto;
+    padding: 10px;
+    
+    border: 2px solid #000;
+    border-radius:10px;
+    background-color: #88d;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items:center;
+}
+
+div.more_info p {
+    border: 1px solid #000;
+    border-radius:10px;
+    background-color: #aaf;
+
+    display: inline-block;
+    flex-basis: 60%;
+    order: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    margin:10px;
+    padding:10px;
+}
+
+div.more_info a {
+    border: 1px solid #000;
+    background-color: #d88;
+    border-radius: 10px;
+    
+    display: inline-block;
+    flex-basis: 20%;
+    order: 1;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    margin:10px;
+    padding: 10px;
+
+    color: #0ff;
+}
+
+div.more_info a:hover {
+    color: #fff;
+}
+
+div.more_info a:visited {
+    color: #888;
+}
