@@ -1,0 +1,59 @@
+div.image_and_text {
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: rgba(255, 189, 189, 0.33);
+    padding:10px;
+    margin: 10px;
+    margin-left:0px;
+    display: inline-block;
+    height: auto;
+    width: 98%;
+}
+
+div.image_and_text div.image {
+    border: none;
+    width:25%;
+    min-width:300px;
+    float: right;
+    text-align: right;
+}
+
+div.image_and_text div.text {
+    border: none;
+    width:100%;
+}
+
+div.image img {
+    border: 2px solid #000;
+    border-radius: 10px;
+    margin: 20px;
+    width: 80%;
+}
+
+div.image_and_text[block_yellow] {
+    background-color: rgba(255, 255, 189, 0.33);
+}
+
+div.image_and_text[block_purple] {
+    background-color: rgba(255, 189, 255, 0.33);
+}
+
+div.image_and_text[block_blue] {
+    background-color: rgba(189, 189, 255, 0.33);
+}
+
+div.image_and_text[block_lightblue] {
+    background-color: rgba(255, 255, 225, 0.33);
+}
+
+div.image_and_text[block_green] {
+    background-color: rgba(189, 255, 189, 0.33);
+}
+
+div.image_and_text[block_orange] {
+    background-color: rgba(255, 225, 189, 0.33);
+}
+
+div.image_and_text[block_white] {
+    background-color: rgba(255, 255, 255, 0.33);
+}
