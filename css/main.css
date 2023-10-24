@@ -5,10 +5,10 @@ div.more_info {
 
     margin: 10px auto;
     padding: 10px;
-    
-    border: 2px solid #000;
+
     border-radius:10px;
-    background-color: #88d;
+    background-color: rgba(255, 255, 255, 0.33);
+    backdrop-filter: blur(10px);
 
     display: flex;
     flex-direction: row;
@@ -18,9 +18,8 @@ div.more_info {
 }
 
 div.more_info p {
-    border: 1px solid #000;
     border-radius:10px;
-    background-color: #aaf;
+    background-color: rgba(0,0,0,0);
 
     display: inline-block;
     flex-basis: 50%;
@@ -35,7 +34,8 @@ div.more_info p {
 /*оформление ссылок в элементах div класса more_info*/
 div.more_info a {
     border: 1px solid #000;
-    background-color: #d88;
+    background-color: rgba(231, 136, 136, 0.33);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
     
     display: inline-block;
@@ -55,5 +55,5 @@ div.more_info a:hover {
 }
 
 div.more_info a:visited {
-    color: #888;
+    color: #088;
 }
