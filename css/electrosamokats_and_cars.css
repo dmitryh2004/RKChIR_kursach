@@ -2,4 +2,25 @@
 :root {
     --color1: rgba(183, 0, 255, 0.33);
     --color2: rgba(197, 76, 39, 0.1);
+    --bg_square_color: rgba(183, 0, 255, 0.1);
+}
+
+div.grid#main {
+    grid-template-areas: 
+    ". samokats_before ."
+    ". samokats_after ."
+    ". summary ."
+    ;
+}
+
+section#samokats_before {
+    grid-area: samokats_before;
+}
+
+section#samokats_after {
+    grid-area: samokats_after;
+}
+
+section#summary {
+    grid-area: summary;
 }

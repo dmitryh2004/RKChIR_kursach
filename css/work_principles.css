@@ -2,4 +2,30 @@
 :root {
     --color1: rgba(67, 67, 216, 0.33);
     --color2: rgba(221, 42, 111, 0.1);
+    --bg_square_color: rgba(67, 67, 216, 0.1);
+}
+
+div.grid#main {
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "samokat_contain samokat_contain"
+    "chain_electrosamokat motor_wheel_electrosamokat"
+    "physics physics"
+    ;
+}
+
+section#samokat_contain {
+    grid-area: samokat_contain;
+}
+
+section#chain_electrosamokat {
+    grid-area: chain_electrosamokat;
+}
+
+section#motor_wheel_electrosamokat {
+    grid-area: motor_wheel_electrosamokat;
+}
+
+section#physics {
+    grid-area: physics;
 }

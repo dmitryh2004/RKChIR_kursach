@@ -1,4 +1,8 @@
 /*Файл css для main.html*/
+:root {
+    --background_opacity: 0.8;
+}
+
 div.more_info {
     width:95%;
     height: auto;
@@ -106,6 +110,10 @@ section div.background, footer div.background {
     transform: none;
     z-index: 0;
     transition-duration: 0.5s;
+}
+
+section div.background {
+    backdrop-filter: blur(5px);
 }
 
 section > div.content:hover + div.background, footer > div.content:hover + div.background {
