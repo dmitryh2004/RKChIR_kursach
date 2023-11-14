@@ -19,6 +19,9 @@ div.more_info {
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items:center;
+
+    opacity:0.999;
+    z-index:1;
 }
 
 div.more_info p {
@@ -68,6 +71,7 @@ section {
     padding:20px;
     width: 90%;
     margin: 0px;
+    min-height:500px;
     height: auto;
     flex-grow: 1;
     flex-shrink: 1;
@@ -87,13 +91,13 @@ section div.title {
     z-index: 1;
 }
 
-section div.content {
-    filter: blur(10px);
+section div.content[showed="0"] {
+    height: auto;
     transition-duration: 0.5s;
 }
 
-section div.content:hover {
-    filter: none;
+section div.content[showed="1"] {
+    height: auto;
     transition-duration: 0.5s;
 }
 
