@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*установка размеров контейнера page-wrap*/
 div.page_wrap {
-    width: 1480px;
+    width: 1400px;
     margin:10px auto;
     display:flex;
     flex-direction: column;
@@ -35,14 +35,14 @@ div.page_wrap {
 @media screen and (max-width: 1500px)
 {
     div.page_wrap {
-        width:980px;
+        width:900px;
     }
 }
 
 @media screen and (max-width: 1000px)
 {
     div.page_wrap {
-        width:98%;
+        width:90%;
     }
 }
 

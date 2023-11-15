@@ -49,7 +49,7 @@ div.more_info a {
     flex-basis: 30%;
     order: 1;
     flex-grow: 1;
-    flex-shrink: 0;
+    flex-shrink: 1;
 
     margin:10px;
     padding: 10px;
@@ -137,18 +137,22 @@ section > div.content:hover + div.background, footer > div.content:hover + div.b
 
 section#history_short {
     grid-area: first;
+    justify-self: left;
 }
 
 section#work_principles_short {
     grid-area: second;
+    justify-self: right;
 }
 
 section#electrosamokats_and_cars_short {
     grid-area: third;
+    justify-self: left;
 }
 
 section#electrosamokats_in_society_short {
     grid-area: fourth;
+    justify-self: right;
 }
 
 div.grid#main {
@@ -190,4 +194,40 @@ div.grid#footer address {
 
 div.grid#footer div.yandex_map {
     grid-area: yandex_map;
+}
+
+@media screen and (max-width: 1500px) {
+    div.more_info {
+        flex-direction: column;
+    }
+
+    section {
+        min-height: 760px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    div.grid#main {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "first"
+        "second"
+        "third"
+        "fourth";
+        justify-content: center;
+        justify-items: stretch;
+        align-items: stretch;
+        row-gap: 20px;
+    }
+
+    section {
+        min-height: 0px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    section {
+        min-height: 0px;
+    }
 }
