@@ -58,7 +58,7 @@ function toogle_block(elem_id, show, index, animate) {
         if (animate)
         {
             deanimate(elem_id, writeout_duration[index]);
-            let timerId = setTimeout(function() {elem.style.color = "#fff"; animate_output(elem_id, show_more, writeout_duration[4]);}, writeout_duration[index]);
+            let timerId = setTimeout(function() {elem.style.color = "#fff"; animate_output(elem_id, show_more, writeout_duration[4]);}, writeout_duration[index] + 100);
         }
         else
         {
@@ -72,7 +72,7 @@ function toogle_block(elem_id, show, index, animate) {
         if (animate)
         {
             deanimate(elem_id, writeout_duration[4]);
-            let timerId = setTimeout(function() {elem.style.color = "#000"; animate_output(elem_id, secs_short[index], writeout_duration[index]);}, writeout_duration[4]);
+            let timerId = setTimeout(function() {elem.style.color = "#000"; animate_output(elem_id, secs_short[index], writeout_duration[index]);}, writeout_duration[4] + 100);
         }
         else
         {
