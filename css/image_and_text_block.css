@@ -57,3 +57,11 @@ div.image_and_text[block_orange] {
 div.image_and_text[block_white] {
     background-color: rgba(255, 255, 255, 0.75);
 }
+
+div.image_and_text[no_color] {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+div.image_and_text[no_border] {
+    border: none;
+}
