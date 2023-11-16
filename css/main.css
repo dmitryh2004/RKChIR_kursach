@@ -53,16 +53,21 @@ div.more_info a {
 
     margin:10px;
     padding: 10px;
-
-    color: #0ff;
 }
 
 div.more_info a:hover {
     color: #fff;
+    text-shadow: 0px 0px 5px #0ff;
 }
 
 div.more_info a:visited {
     color: #088;
+    text-shadow: 0px 0px 5px #0ff !important;
+}
+
+div.more_info a {
+    color: #0ff;
+    text-shadow: 0px 0px 5px #000;
 }
 
 /*оформление section для main*/
