@@ -1,0 +1,56 @@
+div.carusel_unit {
+	display: grid;
+	grid-template-columns: 70px 560px 70px;
+	width: 700px;
+	margin: auto;
+
+	justify-content: center;
+	align-items: center;
+}
+
+div.carusel {
+	--state: 0;
+
+	width: 500px;
+	margin: auto;
+	overflow: hidden;
+	
+	display: flex;
+	flex-flow: row nowrap;
+	position: relative;
+}
+
+div.carusel > div.block {
+	width: 80%;
+	margin: 20px;
+	padding: 20px;
+	background-color: rgba(128, 128, 128, 0.5);
+	border: 2px solid #000;	
+	flex-basis: 50%;
+	flex-grow: 0;
+	flex-shrink: 0;
+	align-self: start;
+	
+	transition-duration: 0.5s;
+	position: relative;
+	left: calc(17% - var(--state) * 67%);
+}
+
+img.left, img.right {
+	width: 70px;
+	height: 70px;
+}
+
+div.carusel::before {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	background-color: rgba(255, 255, 255, 0.3);
+	content: ' ';
+	
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	border-radius: 10px;
+}

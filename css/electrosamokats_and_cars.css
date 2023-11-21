@@ -8,7 +8,7 @@
 div.grid#main {
     grid-template-areas: 
     ". samokats_before ."
-    ". samokats_after ."
+    "samokats_after samokats_after samokats_after"
     ". summary ."
     ;
 }
@@ -19,6 +19,8 @@ section#samokats_before {
 
 section#samokats_after {
     grid-area: samokats_after;
+    max-width: 800px;
+    justify-self: center;
 }
 
 section#summary {

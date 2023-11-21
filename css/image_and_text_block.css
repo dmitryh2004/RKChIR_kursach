@@ -10,12 +10,17 @@ div.image_and_text {
     width: 98%;
 }
 
-div.image_and_text div.image {
+div.image_and_text div.image:not(.vertical) {
     border: none;
     width:25%;
-    min-width:300px;
+    min-width: 300px;
     float: right;
     text-align: right;
+}
+
+div.image_and_text div.image.vertical {
+	border: none;
+    width:90%;
 }
 
 div.image_and_text div.text {

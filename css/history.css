@@ -13,16 +13,49 @@ div.grid#main {
     ;
 }
 
+@media screen and (max-width:1500px)
+{
+	div.grid#main {
+		grid-template-areas: 
+	    ". first_samokat ."
+	    "samokat_in_20_century samokat_in_20_century samokat_dev_directions"
+	    ". samokat_types ."
+	    ;	
+	}
+	
+	div.image_and_text div.image:not(.vertical) {
+		width:90%;
+	    min-width: 0px;
+	    max-width: 500px;
+	    float: none;
+	    margin: auto;
+	    text-align: center;
+	}
+}
+
 @media screen and (max-width:1000px)
 {
     div.grid#main {
+    	grid-template-columns: 75% 25%;
         grid-template-areas: 
+    "first_samokat first_samokat"
+    "samokat_in_20_century samokat_dev_directions"
+    "samokat_types samokat_types"
+    ;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+	div.grid#main {
+		grid-template-columns: 100%;
+		grid-template-areas: 
     "first_samokat"
-    "samokat_in_20_century"
+    "samokat_in_20_century" 
     "samokat_dev_directions"
     "samokat_types"
     ;
-    }
+	}
 }
 
 section#first_samokat {
@@ -31,6 +64,7 @@ section#first_samokat {
 
 section#samokat_in_20_century {
     grid-area: samokat_in_20_century;
+    align-self: start;
 }
 
 aside#samokat_dev_directions {
