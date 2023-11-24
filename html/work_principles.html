@@ -11,12 +11,21 @@
         <link rel="stylesheet" type="text/css" href="../css/sections_model.css">
         <link rel="stylesheet" type="text/css" href="../css/work_principles.css">
         <link rel="stylesheet" type="text/css" href="../css/image_and_text_block.css">
+        <script src="../js/navigation_toogle.js"></script>
     </head>
-    <body>
+    <body onload="toogle_nav(false);">
         <div class="page_wrap">
             <header>
+				<h1>Принцип работы электросамокатов</h1>
                 <nav>
-
+					<h2>Содержание</h2>
+					<button id="nav_toogle" onclick="toogle_nav(false);">Скрыть</button>
+					<ol id="nav_ol">
+						<li><a href="#samokat_contain">Устройство электросамоката</a></li>
+						<li><a href="#chain_electrosamokat">Цепной электросамокат</a></li>
+						<li><a href="#motor_wheel_electrosamokat">Электросамокат с мотором-колесом</a></li>
+						<li><a href="#physics">Немного физики</a></li>
+					</ol>
                 </nav>
             </header>
             <main>
@@ -70,7 +79,7 @@
                         <div class="content">
                             <h3 id="2_1">Цепной электросамокат</h3>
                             <div class="image_and_text">
-                                <div class="image">
+                                <div class="image vertical">
                                     <img src="https://www.voltbikes.ru/upload/voltbikes/files/29.06.2020-2.jpg" alt="Устройство цепного электросамоката">
                                 </div>
                                 <div class="text">
@@ -195,7 +204,7 @@
                             <a id="button_to_the_top" href="electrosamokats_and_cars.html">Следующая страница -&gt;<br>Сравнение электросамоката и автомобиля</a>
                         </div>
                         <address>
-                            Адрес
+                            <a href="about.html">О сайте</a>
                         </address>
                         <div class="yandex_map">
                             Яндекс карта с магазинами м.Видео, Эльдорадо

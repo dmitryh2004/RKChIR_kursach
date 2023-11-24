@@ -12,14 +12,21 @@
         <link rel="stylesheet" type="text/css" href="../css/sections_model.css">
         <link rel="stylesheet" type="text/css" href="../css/electrosamokats_and_cars.css">
         <link rel="stylesheet" type="text/css" href="../css/carusel.css">
-        
+        <script src="../js/navigation_toogle.js"></script>
         <script src="../js/carusel.js"></script>
     </head>
-    <body>
+    <body onload="toogle_nav(false);">
         <div class="page_wrap">
             <header>
+                <h1>Как изменялся статус электросамокатов</h1>
                 <nav>
-    
+					<h2>Содержание</h2>
+					<button id="nav_toogle" onclick="toogle_nav(false);">Скрыть</button>
+					<ol id="nav_ol">
+						<li><a href="#samokats_before">Статус электросамокатов до 1 марта 2023 года</a></li>
+						<li><a href="#samokats_after">Что изменилось 1 марта 2023 года</a></li>
+						<li><a href="#summary">Вывод</a></li>
+					</ol>
                 </nav>
             </header>
             <main>
@@ -57,7 +64,7 @@
                     <section id="samokats_after" carusel>
                         <div class="content">
                         	<h2>Что изменилось 1 марта 2023 года</h2>
-                        	<div class="container" style="width:750px; margin: auto;">
+                        	<div class="container">
 								<div class="carusel_unit">
 									<img src="../media/img/carusel_left_arrow.jpg" class="left" onclick="carusel_shift('carusel1', true);">
 									<div class="carusel" id="carusel1">
@@ -172,7 +179,7 @@
                             <a id="button_to_the_top" href="electrosamokats_in_society.html">Следующая страница -&gt;<br>Мнение общества об электросамокатах</a>
                         </div>
                         <address>
-                            Адрес
+                            <a href="about.html">О сайте</a>
                         </address>
                         <div class="yandex_map">
                             Яндекс карта с магазинами м.Видео, Эльдорадо
