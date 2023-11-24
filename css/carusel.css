@@ -1,3 +1,7 @@
+div.container {
+	width:750px; margin: auto;
+}
+
 div.carusel_unit {
 	display: grid;
 	grid-template-columns: 70px 560px 70px;
@@ -53,4 +57,29 @@ div.carusel::before {
 	
 	border: 2px solid rgba(255, 255, 255, 0.3);
 	border-radius: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+	div.carusel_unit {
+		grid-template-columns: 100%;
+		width: 500px;
+	}
+	
+	div.carusel {
+		flex-direction: column;
+	}
+	
+	div.container {
+		width: 550px !important;
+		margin: 0;
+	}
+	
+	div.carusel > div.block {
+		left: 0;
+		align-self: center;
+	}
+	
+	img.left, img.right {
+		display: none;
+	}
 }

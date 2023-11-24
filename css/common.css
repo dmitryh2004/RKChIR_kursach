@@ -56,7 +56,6 @@ div.grid#main {
     grid-auto-rows: auto;
     justify-content: center;
     justify-items: stretch;
-    align-items: stretch;
     column-gap: 50px;
 }
 /*оптимизация grid в секции main под устройства с экранами шириной меньше 1500 пикселей*/
@@ -105,6 +104,8 @@ header {
     border-radius:10px;
 
     background-color: #fff;
+    
+    padding: 10px;
 }
 
 /*установка main-ов*/
@@ -133,6 +134,24 @@ footer {
     justify-content: space-around;
     align-content: space-around;
     align-items: flex-start;
+}
+
+@media screen and (max-width: 768px)
+{
+	footer {
+		width: 90%;
+		min-width: 0px;
+	}
+	
+	div.grid#footer {
+		grid-template-rows: repeat(2, auto);
+    	grid-template-columns: repeat(2, 1fr);
+    	grid-template-areas: 
+    	"a" 
+    	"site_navigation"
+    	"address"
+    	"yandex_map";
+	}
 }
 
 footer > div.content {
@@ -231,6 +250,7 @@ section {
     overflow: visible;
     display: flex;
     flex-direction: column-reverse;
+    align-self: start;
 }
 
 section div.content, footer div.content {
@@ -357,4 +377,34 @@ aside{
     margin: 50px 0px;
     overflow: auto;
     align-self:flex-start;
+}
+
+header h1 {
+	width: 100%;
+	margin: 0 auto;
+}
+
+nav {
+	width: auto;
+	margin: 10px;
+	display: grid;
+	grid-template-columns: 4fr 1fr;
+	grid-template-rows: repeat(2, auto);
+	grid-template-areas:
+	"title toogle_btn"
+	"headers headers";
+}
+
+nav h2 {
+	grid-area: title;
+}
+
+nav button#nav_toogle {
+	grid-area: toogle_btn;
+	justify-self: center;
+	align-self: center;
+}
+
+nav ol {
+	grid-area: headers;
 }

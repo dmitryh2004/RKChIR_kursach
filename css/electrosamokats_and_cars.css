@@ -26,3 +26,19 @@ section#samokats_after {
 section#summary {
     grid-area: summary;
 }
+
+@media screen and (max-width: 1000px)
+{
+	div.grid#main {
+	    grid-template-columns: 100%;
+	    grid-template-areas: 
+	    "samokats_before"
+	    "samokats_after"
+	    "summary"
+	    ;
+	}
+	
+	section#samokats_after {
+		justify-self: unset;
+	}	
+}

@@ -6,12 +6,37 @@
 }
 
 div.grid#main {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(6, 1fr);
     grid-template-areas: 
-    "samokat_contain samokat_contain"
-    "chain_electrosamokat motor_wheel_electrosamokat"
-    "physics physics"
+    ". samokat_contain samokat_contain samokat_contain samokat_contain ."
+    "chain_electrosamokat chain_electrosamokat chain_electrosamokat motor_wheel_electrosamokat motor_wheel_electrosamokat motor_wheel_electrosamokat"
+    ". physics physics physics physics ."
     ;
+}
+
+@media screen and (max-width: 1000px) {
+	div.grid#main {
+	    grid-template-columns: 50% 50%;
+	    grid-template-areas: 
+	    "samokat_contain samokat_contain"
+	    "chain_electrosamokat motor_wheel_electrosamokat"
+	    "physics physics"
+	    ;
+	    column-gap: 10px;
+	}	
+}
+
+@media screen and (max-width: 768px) {
+	div.grid#main {
+	    grid-template-columns: 100%;
+	    grid-template-rows: repeat(4, auto);
+	    grid-template-areas: 
+	    "samokat_contain"
+	    "chain_electrosamokat" 
+	    "motor_wheel_electrosamokat"
+	    "physics"
+	    ;
+	}	
 }
 
 section#samokat_contain {
