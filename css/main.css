@@ -55,14 +55,18 @@ div.more_info a {
     padding: 10px;
 
     text-shadow: 0px 0px 5px #888;
-}
+    text-align: center;
 
-div.more_info a:hover {
-    color: #fff;
+    transition-duration: 1s;
 }
 
 div.more_info a:visited {
     color: #088;
+}
+
+div.more_info a:hover {
+    color: #fff;
+    transition-duration: 0.1s;
 }
 
 div.more_info a {
@@ -187,12 +191,12 @@ div.grid#footer {
     "address yandex_map";
     justify-content: center;
     justify-items: stretch;
-    align-items: stretch;
+    align-items: flex-start;
     row-gap: 20px;
     column-gap: 20px;
 }
 
-div.grid#footer address {
+div.grid#footer div#about_href {
     grid-area: address;
 }
 

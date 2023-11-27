@@ -38,11 +38,22 @@ div.carusel > div.block {
 	transition-duration: 0.5s;
 	position: relative;
 	left: calc(17% - var(--state) * 67%);
+
+	max-height: 500px;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 img.left, img.right {
 	width: 70px;
 	height: 70px;
+	transition-duration: 0.5s;
+}
+
+img.left:hover, img.right:hover {
+	transform: scale(1.2);
+	filter: drop-shadow(2px 4px 6px black);
+	transition-duration: 0.5s;
 }
 
 div.carusel::before {
@@ -77,9 +88,43 @@ div.carusel::before {
 	div.carusel > div.block {
 		left: 0;
 		align-self: center;
+		max-height: unset;
 	}
 	
 	img.left, img.right {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	div.carusel_unit {
+		grid-template-columns: 100%;
+		width: 100%;
+	}
+	
+	div.carusel {
+		width: 100%;
+		flex-direction: column;
+	}
+	
+	div.container {
+		width: 100% !important;
+		margin: 0;
+	}
+	
+	div.carusel > div.block {
+		border: none;
+		background-color: rgba(0,0,0,0);
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
+		max-width: 100%;
+		left: 0;
+		align-self: center;
+		max-height: unset;
+	}
+	
+	div.carusel::before, img.left, img.right {
 		display: none;
 	}
 }

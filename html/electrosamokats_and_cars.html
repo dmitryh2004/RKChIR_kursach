@@ -12,21 +12,19 @@
         <link rel="stylesheet" type="text/css" href="../css/sections_model.css">
         <link rel="stylesheet" type="text/css" href="../css/electrosamokats_and_cars.css">
         <link rel="stylesheet" type="text/css" href="../css/carusel.css">
-        <script src="../js/navigation_toogle.js"></script>
         <script src="../js/carusel.js"></script>
     </head>
-    <body onload="toogle_nav(false);">
+    <body>
         <div class="page_wrap">
             <header>
                 <h1>Как изменялся статус электросамокатов</h1>
                 <nav>
-					<h2>Содержание</h2>
-					<button id="nav_toogle" onclick="toogle_nav(false);">Скрыть</button>
-					<ol id="nav_ol">
-						<li><a href="#samokats_before">Статус электросамокатов до 1 марта 2023 года</a></li>
-						<li><a href="#samokats_after">Что изменилось 1 марта 2023 года</a></li>
-						<li><a href="#summary">Вывод</a></li>
-					</ol>
+					<p>Содержание:</p>
+					<div id="nav_content" three_elems>
+                        <a href="#samokats_before">Статус электросамокатов до 1 марта 2023 года</a>
+						<a href="#samokats_after">Что изменилось 1 марта 2023 года</a>
+						<a href="#summary">Вывод</a>
+                    </div>
                 </nav>
             </header>
             <main>
@@ -66,10 +64,10 @@
                         	<h2>Что изменилось 1 марта 2023 года</h2>
                         	<div class="container">
 								<div class="carusel_unit">
-									<img src="../media/img/carusel_left_arrow.jpg" class="left" onclick="carusel_shift('carusel1', true);">
+									<img src="../media/img/carusel_left_arrow.png" class="left" onclick="carusel_shift('carusel1', true);">
 									<div class="carusel" id="carusel1">
 										<div class="block">
-											1 марта 2023 года в РФ был принят закон об электросамокатах, приравнивающий их к транспортным средствам. <br>
+											В попытке обеспечить безопасность электросамокатов для участников дорожного движения 1 марта 2023 года в РФ был принят закон об электросамокатах, приравнивающий их к транспортным средствам. <br>
 											Теперь ПДД относят электросамокаты к так называемым "средствам индивидуальной мобильности", или СИМ. Это транспортные средства с двигателем, который приводит в движение одно или несколько колес или роликов: электросамокаты, электровелосипеды, электроскейтборды, гироскутеры, сегвеи, моноколеса и другой аналогичный транспорт. Мощность двигателя не имеет значения: если он есть, самокат или велосипед считают СИМ.
 											На средствах индивидуальной мобильности нельзя передвигаться быстрее 25 км/ч, при этом на них должны быть фары или фонари.
 										</div>
@@ -120,7 +118,7 @@
 											</div>
 										</div>
 									</div>
-									<img src="../media/img/carusel_right_arrow.jpg" class="right" onclick="carusel_shift('carusel1', false);">
+									<img src="../media/img/carusel_right_arrow.png" class="right" onclick="carusel_shift('carusel1', false);">
 								</div>
 							</div>
                         </div>
@@ -178,9 +176,9 @@
                             <a id="button_to_the_top" href="main.html">На главную страницу</a>
                             <a id="button_to_the_top" href="electrosamokats_in_society.html">Следующая страница -&gt;<br>Мнение общества об электросамокатах</a>
                         </div>
-                        <address>
+                        <div id="about_href">
                             <a href="about.html">О сайте</a>
-                        </address>
+                        </div>
                         <div class="yandex_map">
                             Яндекс карта с магазинами м.Видео, Эльдорадо
                         </div>

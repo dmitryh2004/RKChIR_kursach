@@ -6,6 +6,8 @@
 }
 
 div.grid#main {
+    justify-items: end;
+    grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas: 
     ". first_samokat ."
     ". samokat_in_20_century samokat_dev_directions"
@@ -16,11 +18,13 @@ div.grid#main {
 @media screen and (max-width:1500px)
 {
 	div.grid#main {
-		grid-template-areas: 
-	    "first_samokat first_samokat ."
-	    "samokat_in_20_century samokat_in_20_century samokat_dev_directions"
-	    "samokat_types samokat_types ."
-	    ;	
+        justify-items: stretch;
+		grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+        "first_samokat first_samokat"
+        "samokat_in_20_century samokat_dev_directions"
+        "samokat_types samokat_types"
+        ;	
 	}
 	
 	div.image_and_text div.image:not(.vertical) {

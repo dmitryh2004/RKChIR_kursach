@@ -9,67 +9,73 @@
         <link rel="stylesheet" type="text/css" href="../css/fonts.css">
         <link rel="stylesheet" type="text/css" href="../css/common.css">
         <link rel="stylesheet" type="text/css" href="../css/sections_model.css">
-        <style>
-        	:root{
-        		--color1: rgba(67, 67, 216, 0.33);
-    			--color2: rgba(221, 42, 111, 0.1);
-        	}
-        	
-        	div.question_block {
-        		width: 90%;
-        		margin: 0 auto;
-        		display: grid;
-        		grid-template-rows: auto;
-        		grid-template-columns: 100%;
-        		row-gap: 10px;
-        	}
-        	
-        	div.question_block div.question {
-        		padding: 10px;
-        		width: 66%;
-        		justify-self: start;
-        		border: 2px solid #000;
-        		border-radius: 10px;
-        		background-color: rgba(255, 255, 0, 0.5);
-        	}
-        	
-        	div.question_block div.answer {
-        		padding: 10px;
-        		width: 66%;
-        		justify-self: end;
-        		border: 2px solid #000;
-        		border-radius: 10px;
-        		background-color: rgba(0, 255, 0, 0.5);
-        	}
-        </style>
+        <link rel="stylesheet" type="text/css" href="../css/about.css">
+
+		<script src="../js/about.js"></script>
 	</head>
 	<body>
 		<div class="page_wrap">
-			<header>
-				
+			<header style="min-height: 50px;">
+				<h1>О сайте</h1>
 			</header>
 			<main>
-				<section>
-					Автор сайта<br>
-					картинка
-					(сделать пасхалку)
-				</section>
-				<section>
-				<div class="content">
-					<h2>FAQ (Часто задаваемые кем-то вопросы)</h2>
-					<div class="question_block">
-						<div class="question">
-							Плюс 2 или минус 2?
+				<audio id="audio" src="../media/mp3/secretmusic.mp3" preload="auto" loop>
+
+				</audio>
+				<div class="grid" id="main" style="margin-top: 50px;">
+					<section id="author">
+						<div class="content">
+							<h2>Об авторе</h2>
+							<div id="img_with_glowing_border">
+								<div id="border">
+					
+								</div>
+								<img id="authorImage" src="../media/img/author.jpg" alt="Автор сайта" ondblclick="startAboutSecret();">
+							</div>
+							<p>
+								Хохлинов Дмитрий Иванович<br>
+								Студент РТУ МИРЭА, группа ИКБО-03-22
+							</p>
 						</div>
-						<div class="answer">
-							Вопрос не по теме...
+					</section>
+					<section>
+						<div class="content">
+							<h2>FAQ (Часто задаваемые кем-то вопросы)</h2>
+							<div class="question_block">
+								<div class="question">
+									Какая основная тема этого сайта?
+								</div>
+								<div class="answer">
+									Сайт посвящен освещению следующих тем:
+									<ul>
+										<li>Что такое электросамокат;</li>
+										<li>История электросамокатов;</li>
+										<li>Принцип работы электросамоката;</li>
+										<li>Как электросамокат приобрел статус СИМ (средства индивидуальной мобильности);</li>
+										<li>Что стало причиной формирования негативного отношения к электросамокатам.</li>
+									</ul>
+								</div>
+								<div class="question">
+									Как перейти на страницы, посвященные отдельным темам?
+								</div>
+								<div class="answer">
+									На главной странице расположены карточки, соответствующие одной из четырех статей. Можно ознакомиться с кратким содержанием статей, нажав на белый текст в карточке, и свернуть его обратно, нажав по появившемуся тексту.
+								</div>
+								<div class="question">
+									Можно ли узнать, где приобрести электросамокат?
+								</div>
+								<div class="answer">
+									В нижней части каждой страницы есть карта с некоторыми отмеченными магазинами М.Видео и Эльдорадо, которые находятся в Москве.
+								</div>
+							</div>
 						</div>
-					</div>
+					</section>
+					<section id="back">
+						<div class="content">
+							<a href="main.html">К выбору статьи</a>
+						</div>
+					</section>
 				</div>
-				</section>
-				<section>
-					<a href="main.html">К выбору статьи</a>
-				</section>
 			</main>
 		</div>
 	</body>

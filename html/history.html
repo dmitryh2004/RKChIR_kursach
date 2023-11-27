@@ -12,20 +12,25 @@
         <link rel="stylesheet" type="text/css" href="../css/image_and_text_block.css">
         <link rel="stylesheet" type="text/css" href="../css/sections_model.css">
         <link rel="stylesheet" type="text/css" href="../css/history.css">
-        <script src="../js/navigation_toogle.js"></script>
     </head>
-    <body onload="toogle_nav(false);">
+    <body>
         <div class="page_wrap">
             <header id="top">
             	<h1>История электросамокатов</h1>
                 <nav>
-					<h2>Содержание</h2>
-					<button id="nav_toogle" onclick="toogle_nav(false);">Скрыть</button>
-					<ol id="nav_ol">
-						<li><a href="#first_samokat">Первые самокаты</a></li>
-						<li><a href="#samokat_in_20_century">Развитие самокатов в XX веке</a></li>
-						<li><a href="#samokat_types">Типы самокатов</a></li>
-					</ol>
+					<p>
+                        Содержание: 
+                    </p>
+                    <label>
+                        <input type="checkbox" id="nav_show_btn">
+                        <img src="../media/img/nav_show.png" id="nav_show">
+                        <img src="../media/img/nav_hide.png" id="nav_hide">
+                        <div id="nav_content" three_elems>
+                            <a href="#first_samokat">Первые самокаты</a>
+                            <a href="#samokat_in_20_century">Развитие самокатов в XX веке</a>
+                            <a href="#samokat_types">Типы самокатов</a>
+                        </div>
+                    </label>
                 </nav>
             </header>
             <main>
@@ -194,9 +199,9 @@
                             <a id="button_to_the_top" href="main.html">На главную страницу</a>
                             <a id="button_to_the_top" href="work_principles.html">Следующая страница -&gt;<br>Принцип работы электросамокатов</a>
                         </div>
-                        <address>
+                        <div id="about_href">
                             <a href="about.html">О сайте</a>
-                        </address>
+                        </div>
                         <div class="yandex_map">
                             Яндекс карта с магазинами м.Видео, Эльдорадо
                         </div>

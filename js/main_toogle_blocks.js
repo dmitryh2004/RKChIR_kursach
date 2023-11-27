@@ -33,7 +33,7 @@ function deanimate(elem_id, duration) {
     }, delay);
 }
 
-function animate_output(elem_id, string, duration) {
+function animate(elem_id, string, duration) {
     let current_string = "";
     let length = string.length;
     var delay = duration / length;
@@ -51,34 +51,43 @@ function animate_output(elem_id, string, duration) {
     }, delay);
 }
 
-function toogle_block(elem_id, show, index, animate) {
-    elem = document.getElementById(elem_id);
+function toogle_block(elem_id, show, index, _animate) {
+    var elem = document.getElementById(elem_id);
+    elem.setAttribute("onclick", "");
     if (!show)
     {
-        if (animate)
+        if (_animate)
         {
             deanimate(elem_id, writeout_duration[index]);
-            let timerId = setTimeout(function() {elem.style.color = "#fff"; animate_output(elem_id, show_more, writeout_duration[4]);}, writeout_duration[index] + 100);
+            let timerId = setTimeout(function() {
+                elem.style.color = "#fff"; 
+                animate(elem_id, show_more, writeout_duration[4]);
+                let timer2Id = setTimeout(function () {elem.setAttribute("onclick", "toogle_block('" + elem_id + "', true, " + index + ", true);");}, writeout_duration[4] + 100);
+            }, writeout_duration[index] + 100);
         }
         else
         {
             elem.style.color = "#fff";
             elem.innerHTML = show_more;
+            elem.setAttribute("onclick", "toogle_block('" + elem_id + "', true, " + index + ", true);");
         }
-        elem.setAttribute("onclick", "toogle_block('" + elem_id + "', true, " + index + ", true);");
     }
     else
     {   
-        if (animate)
+        if (_animate)
         {
             deanimate(elem_id, writeout_duration[4]);
-            let timerId = setTimeout(function() {elem.style.color = "#000"; animate_output(elem_id, secs_short[index], writeout_duration[index]);}, writeout_duration[4] + 100);
+            let timerId = setTimeout(function() {
+                elem.style.color = "#000"; 
+                animate(elem_id, secs_short[index], writeout_duration[index]);
+                let timer2Id = setTimeout(function () {elem.setAttribute("onclick", "toogle_block('" + elem_id + "', false, " + index + ", true);");}, writeout_duration[index] + 100);
+            }, writeout_duration[4] + 100);
         }
         else
         {
             elem.style.color = "#000";
             elem.innerHTML = secs_short[index];
+            elem.setAttribute("onclick", "toogle_block('" + elem_id + "', false, " + index + ", true);");
         }
-        elem.setAttribute("onclick", "toogle_block('" + elem_id + "', false, " + index + ", true);");
     }
 }

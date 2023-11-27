@@ -21,6 +21,26 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 24px;
 }
 
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
 /*установка размеров контейнера page-wrap*/
 div.page_wrap {
     width: 1400px;
@@ -48,10 +68,10 @@ div.page_wrap {
 
 /*установка общих настроек отображения grid в секции main*/
 div.grid#main {
+    margin-top: 130px;
     display: grid;
     width: 100%;
     height: auto;
-    grid-template-columns: 25% 50% 25%;
     grid-template-rows: auto;
     grid-auto-rows: auto;
     justify-content: center;
@@ -88,24 +108,30 @@ div.grid#footer {
 
 /*установка header-ов*/
 header {
-    width:60%;
+    width:100%;
     height: auto;
     min-height: 118px;
     
     display: block;
     
-    position: sticky;
+    position: fixed;
     top:-10px;
+    left:-1%;
     z-index: 100;
     
     margin: 10px auto;
     
     border:3px solid #000;
+    border-top: none;
     border-radius:10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 
     background-color: #fff;
     
     padding: 10px;
+
+    text-align: center;
 }
 
 /*установка main-ов*/
@@ -144,8 +170,8 @@ footer {
 	}
 	
 	div.grid#footer {
-		grid-template-rows: repeat(2, auto);
-    	grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(4, auto);
+    	grid-template-columns: 1fr;
     	grid-template-areas: 
     	"a" 
     	"site_navigation"
@@ -197,7 +223,7 @@ footer > div.content {
     display: inline-block;
 }
 
-address {
+div#about_href {
     border: 2px solid #000;
     padding:20px;
     border-radius: 10px;
@@ -209,7 +235,7 @@ address {
     flex-grow: 0;
     flex-shrink: 0;
     grid-area: address;
-    align-self: stretch;
+    /*align-self: stretch;*/
 }
 
 div.yandex_map {
@@ -387,24 +413,106 @@ header h1 {
 nav {
 	width: auto;
 	margin: 10px;
-	display: grid;
-	grid-template-columns: 4fr 1fr;
-	grid-template-rows: repeat(2, auto);
-	grid-template-areas:
-	"title toogle_btn"
-	"headers headers";
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
 }
 
-nav h2 {
-	grid-area: title;
+nav p {
+    display: inline-block;
 }
 
-nav button#nav_toogle {
-	grid-area: toogle_btn;
-	justify-self: center;
-	align-self: center;
+nav #nav_show_btn, nav #nav_show, nav #nav_hide {
+    display: none;
 }
 
-nav ol {
-	grid-area: headers;
+@media screen and (max-width: 1000px) {
+    nav p {
+        display: none;
+    }
+
+    nav #nav_show_btn {
+        display: none;
+    }
+    
+    nav #nav_show, nav #nav_hide {
+        display: inline;
+    }
+    
+    #nav_show_btn:not(:checked) ~ #nav_hide, #nav_show_btn:checked ~ #nav_show {
+        display: none;
+    }
+    
+    #nav_show_btn:not(:checked) ~ div#nav_content {
+        display: none;
+    }
+    
+    #nav_show_btn:checked ~ div#nav_content {
+        display: grid;
+    } 
+}
+
+nav div#nav_content {
+    display: inline-flex;
+    background-color: var(--color1);
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    align-items: center;
+}
+
+nav div#nav_content a {
+    display: inline-block;
+
+    margin:0px;
+    padding:10px;
+
+    flex-basis: auto;
+    flex-grow: 1;
+
+    max-width: 250px;
+
+    text-shadow: 1px 1px 2px #000;
+    text-align: center;
+
+    transition-duration: 1s;
+}
+
+nav div#nav_content a:visited {
+    color: #088;
+}
+
+nav div#nav_content a:hover {
+    color: #fff;
+    transition-duration: 0.1s;
+}
+
+nav div#nav_content a {
+    color: #0ff;
+}
+
+@media screen and (max-width: 1000px)
+{
+    nav div#nav_content { /* изначальный вариант, если в навигации 4 элемента */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    nav div#nav_content[three_elems] { /* если в навигации 3 элемента */
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 767px)
+{
+    nav div#nav_content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
 }

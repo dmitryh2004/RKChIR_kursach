@@ -11,21 +11,19 @@
         <link rel="stylesheet" type="text/css" href="../css/sections_model.css">
         <link rel="stylesheet" type="text/css" href="../css/work_principles.css">
         <link rel="stylesheet" type="text/css" href="../css/image_and_text_block.css">
-        <script src="../js/navigation_toogle.js"></script>
     </head>
-    <body onload="toogle_nav(false);">
+    <body>
         <div class="page_wrap">
             <header>
 				<h1>Принцип работы электросамокатов</h1>
                 <nav>
-					<h2>Содержание</h2>
-					<button id="nav_toogle" onclick="toogle_nav(false);">Скрыть</button>
-					<ol id="nav_ol">
-						<li><a href="#samokat_contain">Устройство электросамоката</a></li>
-						<li><a href="#chain_electrosamokat">Цепной электросамокат</a></li>
-						<li><a href="#motor_wheel_electrosamokat">Электросамокат с мотором-колесом</a></li>
-						<li><a href="#physics">Немного физики</a></li>
-					</ol>
+					<p>Содержание:</p>
+					<div id="nav_content">
+                        <a href="#samokat_contain">Устройство электросамоката</a>
+						<a href="#chain_electrosamokat">Цепной электросамокат</a>
+						<a href="#motor_wheel_electrosamokat">Электросамокат с мотором-колесом</a>
+						<a href="#physics">Немного физики</a>
+                    </div>
                 </nav>
             </header>
             <main>
@@ -203,9 +201,9 @@
                             <a id="button_to_the_top" href="main.html">На главную страницу</a>
                             <a id="button_to_the_top" href="electrosamokats_and_cars.html">Следующая страница -&gt;<br>Сравнение электросамоката и автомобиля</a>
                         </div>
-                        <address>
+                        <div id="about_href">
                             <a href="about.html">О сайте</a>
-                        </address>
+                        </div>
                         <div class="yandex_map">
                             Яндекс карта с магазинами м.Видео, Эльдорадо
                         </div>
