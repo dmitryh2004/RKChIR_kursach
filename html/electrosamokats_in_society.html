@@ -17,12 +17,19 @@
             <header>
                 <h1>Мнение общества об электросамокатах</h1>
                 <nav>
-					<p>Содержание:</p>
-					<div id="nav_content" three_elems>
-                        <a href="#russian_opinion">Мнение россиян об электросамокатах</a>
-						<a href="#electrosamokat_dangers">Причины негативного отношения к электросамокатам</a>
-                        <a href="#how_to_solve">Как решить проблемы, связанные с электросамокатами</a>
-                    </div>
+					<p>
+                        Содержание: 
+                    </p>
+                    <label>
+                        <input type="checkbox" id="nav_show_btn">
+                        <img src="../media/img/nav_show.png" id="nav_show">
+                        <img src="../media/img/nav_hide.png" id="nav_hide">
+                        <div id="nav_content" three_elems>
+                            <a href="#russian_opinion">Мнение россиян об электросамокатах</a>
+                            <a href="#electrosamokat_dangers">Причины негативного отношения к электросамокатам</a>
+                            <a href="#how_to_solve">Как решить проблемы, связанные с электросамокатами</a>
+                        </div>
+                    </label>
                 </nav>
             </header>
             <main>
@@ -43,7 +50,7 @@
                                         <li class="caption-item">это смерть на колесах, электросамокаты нужно запретить (14%)</li>
                                     </ul>
                                 </div>
-                                <svg class="chart" width="500" height="500" viewBox="0 0 50 50">
+                                <svg class="chart" viewBox="0 0 50 50">
                                     <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
                                     <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
                                     <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
@@ -132,17 +139,19 @@
             </main>
             <footer>
                 <div class="content">
-                    <a id="button_to_the_top" href="#top">Наверх</a>
-                    <div id="site_navigation">
-                        <a href="electrosamokats_and_cars.html">&lt;- Предыдущая страница<br>Сравнение электросамоката и автомобиля</a>
-                        <a id="button_to_the_top" href="main.html">На главную страницу</a>
-                        <a id="button_to_the_top" href="history.html">Следующая страница -&gt;<br>История электросамокатов</a>
-                    </div>
-                    <div id="about_href">
-                        <a href="about.html">О сайте</a>
-                    </div>
-                    <div class="yandex_map">
-                        Яндекс карта с магазинами м.Видео, Эльдорадо
+                    <div class="grid" id="footer">
+                        <a id="button_to_the_top" href="#top">Наверх</a>
+                        <div id="site_navigation">
+                            <a href="electrosamokats_and_cars.html">&lt;- Предыдущая страница<br>Сравнение электросамоката и автомобиля</a>
+                            <a id="button_to_the_top" href="main.html">На главную страницу</a>
+                            <a id="button_to_the_top" href="history.html">Следующая страница -&gt;<br>История электросамокатов</a>
+                        </div>
+                        <div id="about_href">
+                            <a href="about.html">О сайте</a>
+                        </div>
+                        <div class="yandex_map">
+                            Яндекс карта с магазинами м.Видео, Эльдорадо
+                        </div>
                     </div>
                 </div>
                 <div class="background" style="--color1: rgb(219, 205, 14); --color2: rgba(219, 205, 14, 0.5);">

@@ -49,6 +49,7 @@ div.page_wrap {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-around;
+    align-items: center;
     height:auto;
 }
 /*оптимизация page_wrap под устройства с экранами шириной меньше 1500 пикселей*/
@@ -75,7 +76,7 @@ div.grid#main {
     grid-template-rows: auto;
     grid-auto-rows: auto;
     justify-content: center;
-    justify-items: stretch;
+    justify-items: center;
     column-gap: 50px;
 }
 /*оптимизация grid в секции main под устройства с экранами шириной меньше 1500 пикселей*/
@@ -132,6 +133,25 @@ header {
     padding: 10px;
 
     text-align: center;
+}
+
+@media screen and (max-width: 767px)
+{
+    div.grid#main {
+        margin-top: 30px;
+    }
+
+    header {
+        width: 110%;
+        padding: 0px;
+        left: -5%;
+        border-radius: 0px;
+        min-height: 80px;
+    }
+
+    header h1 {
+        display: none;
+    }
 }
 
 /*установка main-ов*/
@@ -390,6 +410,13 @@ section > div.background_square#bgs6, footer > div.background_square#bgs6 {
     }
     to {
         transform: translate(0, 0);
+    }
+}
+
+@media screen and (max-width: 767px)
+{
+    section > div.background_square, footer > div.background_square {
+        display: none;
     }
 }
 

@@ -12,8 +12,20 @@ div.grid#main {
     ". russian_opinion ."
     ". electrosamokat_dangers ."
     ". how_to_solve ."
-    ". summary ."
     ;
+}
+
+@media screen and (max-width: 1000px)
+{
+    div.grid#main {
+        justify-items: center;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "russian_opinion"
+        "electrosamokat_dangers"
+        "how_to_solve"
+        ;
+    }
 }
 
 section#russian_opinion {
@@ -26,10 +38,6 @@ section#electrosamokat_dangers {
 
 section#how_to_solve {
     grid-area: how_to_solve;
-}
-
-section#summary {
-    grid-area: summary;
 }
 
 .canvas {
@@ -140,6 +148,20 @@ section#summary {
 
 .caption-item:nth-child(1)::before {
     background-color: #00f;
+}
+
+@media screen and (max-width: 767px) {
+    .canvas {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 767px)
+{
+    .legend {
+        margin-left: 0px;
+        align-self: self-start;
+    }
 }
 
 @keyframes render {

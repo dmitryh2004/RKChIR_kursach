@@ -22,6 +22,7 @@ div.question_block {
 div.question_block div.question {
     padding: 10px;
     max-width: 66%;
+    margin-left: -10px;
     justify-self: start;
     border: 2px solid #000;
     border-radius: 10px;
@@ -31,10 +32,32 @@ div.question_block div.question {
 div.question_block div.answer {
     padding: 10px;
     max-width: 66%;
+    margin-right: -10px;
     justify-self: end;
     border: 2px solid #000;
     border-radius: 10px;
     background-color: rgba(0, 255, 0, 0.5);
+}
+
+@media screen and (max-width: 767px) {
+    div.question_block {
+        margin: 0;
+        width: 100%;
+    }
+
+    div.question_block div.question {
+        max-width: 100%;
+    }
+
+    div.question_block div.answer {
+        padding: 5px;
+        max-width: 100%;
+        justify-self: stretch;
+    }
+
+    div.question_block div.answer li {
+        margin-left: -20px;
+    }
 }
 
 section#author {

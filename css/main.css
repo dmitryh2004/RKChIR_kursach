@@ -239,3 +239,19 @@ div.grid#footer div.yandex_map {
         min-height: 0px;
     }
 }
+
+@media screen and (max-width: 768px)
+{
+	footer {
+		width: 90%;
+		min-width: 0px;
+	}
+	
+	div.grid#footer {
+		grid-template-rows: repeat(2, auto);
+    	grid-template-columns: 1fr;
+    	grid-template-areas:
+    	"address"
+    	"yandex_map";
+	}
+}

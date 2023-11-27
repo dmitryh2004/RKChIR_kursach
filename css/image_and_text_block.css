@@ -21,6 +21,8 @@ div.image_and_text div.image:not(.vertical) {
 div.image_and_text div.image.vertical {
 	border: none;
     width:90%;
+    margin: auto;
+    text-align: center;
 }
 
 div.image_and_text div.text {
@@ -69,4 +71,15 @@ div.image_and_text[no_color] {
 
 div.image_and_text[no_border] {
     border: none;
+}
+
+@media screen and (max-width: 1500px) {
+	div.image_and_text div.image:not(.vertical) {
+		width:100%;
+	    min-width: 0px;
+	    max-width: 500px;
+	    float: none;
+	    margin: auto;
+	    text-align: center;
+	}
 }
