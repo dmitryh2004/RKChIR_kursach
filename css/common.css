@@ -264,13 +264,19 @@ div.yandex_map {
     border-radius: 10px;
     margin: 10px;
     text-align: center;
-    overflow: auto;
+    overflow: hidden;
     order: 4;
     flex-basis: 40%;
     flex-grow: 0;
     flex-shrink: 0;
     grid-area: yandex_map;
     align-self: stretch;
+}
+
+div.yandex_map iframe {
+    margin: 10px auto;
+    border: 2px solid #000;
+    width: 100%;
 }
 
 /*описание рядов, используемых для выравнивания блоков контента в main*/

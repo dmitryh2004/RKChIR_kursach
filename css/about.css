@@ -1,5 +1,5 @@
 :root {
-    --color1: rgba(67, 67, 216, 0.33);
+    --color1: rgba(216, 216, 67, 0.33);
     --color2: rgba(221, 42, 111, 0.1);
     --border-width: 2px;
     --img_with_glowing_border_border_color: #f00;
@@ -192,5 +192,11 @@ div#img_with_glowing_border > div#border {
     }
     100% {
         --img_with_glowing_border_border_color: #f00;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header h1 {
+        display: inline;
     }
 }

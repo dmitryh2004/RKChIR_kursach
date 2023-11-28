@@ -3,11 +3,10 @@ div.image_and_text {
     border-radius: 10px;
     background-color: rgba(255, 189, 189, 0.75);
     padding:10px;
-    margin: 10px;
-    margin-left:0px;
+    margin: 10px 0;
     display: inline-block;
     height: auto;
-    width: 98%;
+    width: auto;
 }
 
 div.image_and_text div.image:not(.vertical) {
@@ -35,6 +34,11 @@ div.image img {
     border-radius: 10px;
     margin: 20px;
     width: 80%;
+}
+
+div.image.large img {
+    width: 100%;
+    margin: 20px auto;
 }
 
 div.image_and_text[block_yellow] {
@@ -71,6 +75,7 @@ div.image_and_text[no_color] {
 
 div.image_and_text[no_border] {
     border: none;
+    padding: 0px;
 }
 
 @media screen and (max-width: 1500px) {
