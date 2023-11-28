@@ -5,7 +5,7 @@ section {
     background-color: var(--color1);
     backdrop-filter: blur(10px);
     width: 100%;
-    margin: 50px 0px;
+    margin: 20px 0px;
     height: auto;
     overflow: visible;
     display: flex;

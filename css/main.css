@@ -4,11 +4,10 @@
 }
 
 div.more_info {
-    width:95%;
+    width:100%;
     height: auto;
 
     margin: 10px auto;
-    padding: 10px;
 
     border-radius:10px;
     background-color: rgba(255, 255, 255, 0.33);
@@ -87,6 +86,7 @@ section {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
+    text-align: center;
 }
 
 section div.content, footer div.content {
@@ -216,7 +216,7 @@ div.grid#footer div.yandex_map {
 
 @media screen and (max-width: 1000px) {
     div.grid#main {
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(4, auto);
         grid-template-columns: 100%;
         grid-template-areas: 
         "first"

@@ -69,7 +69,7 @@ div.page_wrap {
 
 /*установка общих настроек отображения grid в секции main*/
 div.grid#main {
-    margin-top: 130px;
+    margin-top: 170px;
     display: grid;
     width: 100%;
     height: auto;
@@ -111,7 +111,7 @@ div.grid#footer {
 header {
     width:100%;
     height: auto;
-    min-height: 118px;
+    min-height: 167px;
     
     display: block;
     
@@ -166,9 +166,9 @@ main {
 
 /*установка footer-ов*/
 footer {
-    padding:20px;
+    padding:10px;
     border-radius: 10px;
-    width: 60%;
+    /*width: 60%;*/
     min-width: 400px;
     margin: 20px auto;
     text-align: center;
@@ -185,7 +185,7 @@ footer {
 @media screen and (max-width: 768px)
 {
 	footer {
-		width: 90%;
+		/*width: 90%;*/
 		min-width: 0px;
 	}
 	
@@ -291,7 +291,7 @@ section {
     padding:20px;
     border-radius: 10px;
     width: 100%;
-    margin: 50px 0px;
+    margin: 20px 0px;
     height: auto;
     overflow: visible;
     display: flex;
@@ -427,7 +427,7 @@ aside{
     padding:20px;
     border-radius:10px;
     width: 100%;
-    margin: 50px 0px;
+    margin: 20px 0px;
     overflow: auto;
     align-self:flex-start;
 }
@@ -525,13 +525,13 @@ nav div#nav_content a {
     nav div#nav_content { /* изначальный вариант, если в навигации 4 элемента */
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
     }
 
     nav div#nav_content[three_elems] { /* если в навигации 3 элемента */
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, auto);
     }
 }
 
@@ -540,6 +540,6 @@ nav div#nav_content a {
     nav div#nav_content {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, auto);
     }
 }

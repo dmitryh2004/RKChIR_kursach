@@ -48,6 +48,14 @@ section#how_to_solve {
     max-width: 800px;
 }
 
+.border {
+    fill: none;
+    stroke-width: 11;
+    stroke: #000;
+    /*animation-name: render;
+    animation-duration: 1.5s;*/
+}
+
 .unit {
     fill: none;
     stroke-width: 10;
@@ -56,33 +64,33 @@ section#how_to_solve {
     animation-duration: 1.5s;
 }
 
-.unit:nth-child(4) {
+.unit:nth-child(5) {
     stroke: #f80;
-    stroke-dasharray: 45 100;
+    stroke-dasharray: 44.7 100;
     stroke-dashoffset: -41;
 }
 
-.unit:nth-child(3) {
+.unit:nth-child(4) {
     stroke: #0f0;
-    stroke-dasharray: 23 100;
+    stroke-dasharray: 22.7 100;
     stroke-dashoffset: -18;
 }
 
-.unit:nth-child(2) {
+.unit:nth-child(3) {
     stroke: #8ff;
-    stroke-dasharray: 14 100;
+    stroke-dasharray: 13.7 100;
     stroke-dashoffset: -4;
 }
 
-.unit:nth-child(5) {
+.unit:nth-child(6) {
     stroke: #f00;
-    stroke-dasharray: 14 100;
+    stroke-dasharray: 13.7 100;
     stroke-dashoffset: -86;
 }
 
-.unit:nth-child(1) {
+.unit:nth-child(2) {
     stroke: #00f;
-    stroke-dasharray: 4 100;
+    stroke-dasharray: 3.7 100;
 }
 
 .legend {
