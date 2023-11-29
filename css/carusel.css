@@ -86,6 +86,7 @@ div.carusel::before {
 	}
 	
 	div.carusel > div.block {
+		filter: none !important;
 		left: 0;
 		align-self: center;
 		max-height: unset;

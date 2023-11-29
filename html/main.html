@@ -8,14 +8,19 @@
         
         <!-- импорт css -->
         <link rel="stylesheet" type="text/css" href="../css/fonts.css">
+        <link rel="stylesheet" type="text/css" href="../css/loading.css">
         <link rel="stylesheet" type="text/css" href="../css/common.css">
         <link rel="stylesheet" type="text/css" href="../css/main.css">
 
         <!-- js -->
         <script src="../js/main_toogle_blocks.js"></script>
         <script src="../js/main_init.js"></script>
+        <script src="../js/loading.js"></script>
     </head>
-    <body onload="main_init();">
+    <body onload="main_init(); play_load_animation();">
+        <div id="loading">
+            <img id="loading_gif" src="../media/gif/loading.gif">
+        </div>
         <div class="page_wrap">
             <header style="min-height: 50px;">
             	<h1>Главная страница</h1>
@@ -92,14 +97,18 @@
                             <a href="about.html">О сайте</a>
                         </div>
                         <div class="yandex_map">
-                            Магазины М.Видео в Москве
-                            <iframe src="https://yandex.ru/map-widget/v1/?display-text=%D0%9C.%D0%92%D0%B8%D0%B4%D0%B5%D0%BE&ll=37.660409%2C55.743330&mode=search&sll=37.660409%2C55.742710&text=chain_id%3A%286002372%29&z=10" width="100%" height="350" frameborder="0">
-                                Ошибка при загрузке карты. Возможно, браузер не поддерживает эту функцию.
-                            </iframe>
-                            Магазины Эльдорадо в Москве
-                            <iframe src="https://yandex.ru/map-widget/v1/?ll=37.576975%2C55.702561&mode=search&sll=37.617742%2C55.709287&sspn=0.246506%2C0.081703&text=%D1%8D%D0%BB%D1%8C%D0%B4%D0%BE%D1%80%D0%B0%D0%B4%D0%BE&z=12" width="100%" height="350" frameborder="0">
-                                Ошибка при загрузке карты. Возможно, браузер не поддерживает эту функцию.
-                            </iframe>
+                            <div class="yandex_map_1">
+                                Магазины М.Видео в Москве
+                                <iframe src="https://yandex.ru/map-widget/v1/?display-text=%D0%9C.%D0%92%D0%B8%D0%B4%D0%B5%D0%BE&ll=37.660409%2C55.743330&mode=search&sll=37.660409%2C55.742710&text=chain_id%3A%286002372%29&z=10" width="100%" height="350" frameborder="0">
+                                    Ошибка при загрузке карты. Возможно, браузер не поддерживает эту функцию.
+                                </iframe>
+                            </div>
+                            <div class="yandex_map_1">
+                                Магазины Эльдорадо в Москве
+                                <iframe src="https://yandex.ru/map-widget/v1/?ll=37.576975%2C55.702561&mode=search&sll=37.617742%2C55.709287&sspn=0.246506%2C0.081703&text=%D1%8D%D0%BB%D1%8C%D0%B4%D0%BE%D1%80%D0%B0%D0%B4%D0%BE&z=12" width="100%" height="350" frameborder="0">
+                                    Ошибка при загрузке карты. Возможно, браузер не поддерживает эту функцию.
+                                </iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -110,3 +119,9 @@
         </div>
     </body>
 </html>
+<!--
+    "Источники"
+    1) https://electro.club/forum/elektrosamokaty - верхняя часть, зафиксированная при прокрутке (переделана)
+    2) https://e-samokat.com/poleznyye-stati - идея с карточками для статей, дизайн никак не похож на оригинал
+    3) https://www.voltbikes.ru/blog/about-segways/kak-ustroen-elektrosamokat/ - материал
+-->

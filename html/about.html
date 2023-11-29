@@ -7,13 +7,18 @@
         <title>ООО "Электросамокаты" (проектное название)</title>
 
         <link rel="stylesheet" type="text/css" href="../css/fonts.css">
+		<link rel="stylesheet" type="text/css" href="../css/loading.css">
         <link rel="stylesheet" type="text/css" href="../css/common.css">
         <link rel="stylesheet" type="text/css" href="../css/sections_model.css">
         <link rel="stylesheet" type="text/css" href="../css/about.css">
 
 		<script src="../js/about.js"></script>
+		<script src="../js/loading.js"></script>
 	</head>
-	<body>
+	<body onload="play_load_animation();">.
+		<div id="loading">
+            <img id="loading_gif" src="../media/gif/loading.gif">
+        </div>
 		<div class="page_wrap">
 			<header style="min-height: 50px;">
 				<h1>О сайте</h1>
@@ -37,15 +42,6 @@
 								Студент РТУ МИРЭА, группа ИКБО-03-22
 							</p>
 						</div>
-						<div class="background_square" id="bgs1" style="--i: 0">
-
-                        </div>
-                        <div class="background_square" id="bgs2" style="--i: 1">
-
-                        </div>
-                        <div class="background_square" id="bgs3" style="--i: 2">
-
-                        </div>
 					</section>
 					<section>
 						<div class="content">
@@ -76,17 +72,14 @@
 								<div class="answer">
 									В нижней части каждой страницы есть карта с некоторыми отмеченными магазинами М.Видео и Эльдорадо, которые находятся в Москве.
 								</div>
+								<div class="question">
+									Некоторые картинки слишком маленькие, и на них сложно что-то увидеть. Можно ли их увеличить?
+								</div>
+								<div class="answer">
+									Конечно! При нажатии на картинку она откроется в новом окне, если не является частью интерфейса сайта.
+								</div>
 							</div>
 						</div>
-						<div class="background_square" id="bgs1" style="--i: 0">
-
-                        </div>
-                        <div class="background_square" id="bgs2" style="--i: 1">
-
-                        </div>
-                        <div class="background_square" id="bgs3" style="--i: 2">
-
-                        </div>
 					</section>
 					<section id="back">
 						<div class="content">
