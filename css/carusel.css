@@ -15,7 +15,7 @@ div.carusel_unit {
 div.carusel {
 	--state: 0;
 
-	width: 500px;
+	width: 540px;
 	margin: auto;
 	overflow: hidden;
 	
@@ -39,15 +39,28 @@ div.carusel > div.block {
 	position: relative;
 	left: calc(17% - var(--state) * 67%);
 
-	max-height: 500px;
+	max-height: 400px;
 	overflow-y: auto;
 	overflow-x: hidden;
 }
 
 img.left, img.right {
+	position: relative;
 	width: 70px;
 	height: 70px;
 	transition-duration: 0.5s;
+	background-color: rgba(255, 255, 255, 0.3);
+
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	border-radius: 10px;
+}
+
+img.left {
+	justify-self: end;
+}
+
+img.right {
+	justify-self: start;
 }
 
 img.left:hover, img.right:hover {
