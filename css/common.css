@@ -568,3 +568,557 @@ nav div#nav_content a {
         grid-template-rows: repeat(3, auto);
     }
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto-Serif';
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+/*установка размеров контейнера page-wrap*/
+div.page_wrap {
+    width: 1400px;
+    margin:10px auto;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height:auto;
+}
+/*оптимизация page_wrap под устройства с экранами шириной меньше 1500 пикселей*/
+@media screen and (max-width: 1500px)
+{
+    div.page_wrap {
+        width:900px;
+    }
+}
+
+@media screen and (max-width: 1000px)
+{
+    div.page_wrap {
+        width:90%;
+    }
+}
+
+/*установка общих настроек отображения grid в секции main*/
+div.grid#main {
+    margin-top: 170px;
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+    justify-content: center;
+    justify-items: center;
+    column-gap: 50px;
+}
+/*оптимизация grid в секции main под устройства с экранами шириной меньше 1500 пикселей*/
+@media screen and (max-width:1000px)
+{
+    div.grid#main {
+        grid-template-columns: 100%;
+    }
+    div.grid#main section, div.grid#main aside {
+        width: 90%;
+        justify-self: center;
+    }
+}
+
+div.grid#footer {
+    width:100%;
+    height: auto;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "a site_navigation"
+    "yandex_map yandex_map"
+    "address address";
+    justify-content: center;
+    justify-items: stretch;
+    align-items: flex-start;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+/*установка header-ов*/
+header {
+    width:100%;
+    height: auto;
+    min-height: 108px;
+    
+    display: block;
+    
+    position: fixed;
+    top:-10px;
+    left:-1%;
+    z-index: 100;
+    
+    margin: 10px auto;
+    
+    border:3px solid #000;
+    border-top: none;
+    border-radius:10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    background-color: #fff;
+    
+    padding: 10px;
+
+    text-align: center;
+}
+
+@media screen and (max-width: 767px)
+{
+    div.grid#main {
+        margin-top: 60px;
+    }
+
+    header {
+        width: 110%;
+        padding: 0px;
+        left: -5%;
+        border-radius: 0px;
+        min-height: 80px;
+    }
+
+    header h1 {
+        display: none;
+    }
+}
+
+/*установка main-ов*/
+main {
+    width:100%;
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+/*установка footer-ов*/
+footer {
+    padding:10px;
+    border-radius: 10px;
+    /*width: 60%;*/
+    min-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+    overflow: visible;
+    position: relative;
+
+    display: flex;
+    flex-flow: column-reverse wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 768px)
+{
+	footer {
+		/*width: 90%;*/
+		min-width: 0px;
+	}
+	
+	div.grid#footer {
+		grid-template-rows: repeat(4, auto);
+    	grid-template-columns: 1fr;
+    	grid-template-areas: 
+    	"a" 
+    	"site_navigation"
+    	"address"
+    	"yandex_map";
+	}
+}
+
+footer > div.content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: flex-start;
+}
+
+#button_to_the_top {
+    border: 2px solid #000;
+    padding:20px;
+    border-radius: 10px;
+    margin: 10px;
+    order: 1;
+    flex-basis: 40%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+#site_navigation {
+    grid-area: site_navigation;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+#site_navigation a {
+    border: 2px solid #000;
+    padding:20px;
+    border-radius: 10px;
+    margin: 10px;
+    display: inline-block;
+}
+
+div#about_href {
+    border: 2px solid #000;
+    padding:20px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    overflow: auto;
+    grid-area: address;
+    /*align-self: stretch;*/
+}
+
+div.yandex_map {
+    border: 2px solid #000;
+    padding:20px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    overflow: hidden;
+    grid-area: yandex_map;
+    align-self: stretch;
+
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: end;
+}
+
+div.yandex_map_1 {
+    width: 95%;
+}
+
+div.yandex_map iframe {
+    margin: 10px auto;
+    border: 2px solid #000;
+    width: 100%;
+}
+
+@media screen and (max-width: 767px)
+{
+    div.yandex_map {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+    }
+}
+
+/*описание рядов, используемых для выравнивания блоков контента в main*/
+div.row {
+    margin:10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+/*установка section по умолчанию*/
+section {
+    position:relative;
+    padding:20px;
+    border-radius: 10px;
+    width: 100%;
+    margin: 20px 0px;
+    height: auto;
+    overflow: visible;
+    display: flex;
+    flex-direction: column-reverse;
+    align-self: start;
+}
+
+section div.content, footer div.content {
+    opacity: 0.999;
+    z-index: 1;
+}
+
+section div.background, footer div.background {
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background-image: linear-gradient(-30deg, var(--color1), var(--color2));
+    border-radius:10px;
+    z-index: 0;
+    transition-duration: 0.5s;
+    backdrop-filter: blur(10px);
+}
+
+section > div.content:hover + div.background, footer > div.content:hover + div.background {
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background-image: linear-gradient(-30deg, var(--color1), var(--color2));
+    border-radius:10px;
+    z-index: 0;
+    transition-duration: 0.5s;
+}
+
+section div.background_square, footer div.background_square {
+    position: absolute;
+    animation: bg_square_movement 10s calc(0.2s * var(--i)) infinite forwards;
+    background-color: var(--bg_square_color);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    z-index: 3;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    transition-delay: calc(var(--i) * 0.1s);
+}
+
+section > div.content:hover ~ div.background_square, footer > div.content:hover ~ div.background_square {
+    opacity: 1;
+    transition-duration: 0.5s;
+    transition-delay: calc(var(--i) * 0.1s);
+}
+
+section > div.background_square#bgs1, footer > div.background_square#bgs1 {
+    top: -30px;
+    left: -10px;
+    width: 75px;
+    height: 50px;
+}
+
+section > div.background_square#bgs2, footer > div.background_square#bgs2 {
+    bottom: 30px;
+    left: -10px;
+    width: 55px;
+    height: 75px;
+}
+
+section > div.background_square#bgs3, footer > div.background_square#bgs3 {
+    bottom: 30px;
+    right: 15px;
+    width: 85px;
+    height: 45px;
+}
+
+section > div.background_square#bgs4, footer > div.background_square#bgs4 {
+    top: 30px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+section > div.background_square#bgs5, footer > div.background_square#bgs5 {
+    bottom: 10px;
+    right: 200px;
+    width: 45px;
+    height: 85px;
+}
+
+section > div.background_square#bgs6, footer > div.background_square#bgs6 {
+    top: 10px;
+    left: 250px;
+    width: 60px;
+    height: 60px;
+}
+
+@keyframes bg_square_movement {
+    from {
+        transform: translate(0, 0);
+    }
+    20% {
+        transform: translate(-20px, -40px) scale(0.8);
+    }
+    40% {
+        transform: translate(20px, -40px) scale(1.2);
+    }
+    60% {
+        transform: translate(20px, 40px) scale(0.9);
+    }
+    80% {
+        transform: translate(-20px, 40px) scale(1.1);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@media screen and (max-width: 1000px)
+{
+    section > div.background_square, footer > div.background_square {
+        display: none;
+    }
+}
+
+/*установка aside по умолчанию*/
+aside{
+    background-color: var(--color2);
+    backdrop-filter: blur(10px);
+    padding:20px;
+    border-radius:10px;
+    width: 100%;
+    margin: 20px 0px;
+    overflow: auto;
+    align-self:flex-start;
+}
+
+header h1 {
+	width: 100%;
+	margin: 0 auto;
+}
+
+nav {
+	width: auto;
+	margin: 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+nav p {
+    display: inline-block;
+}
+
+a:visited {
+    color: #088;
+}
+
+a:hover {
+    color: #fff;
+    transition-duration: 0.1s;
+}
+
+a {
+    text-shadow: 1px 1px 2px #000;
+    color: #0ff;
+    transition-duration: 1s;
+}
+
+nav #nav_show_btn, nav #nav_show, nav #nav_hide {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    nav p {
+        display: none;
+    }
+
+    nav #nav_show_btn {
+        display: none;
+    }
+    
+    nav #nav_show, nav #nav_hide {
+        display: inline;
+    }
+    
+    #nav_show_btn:not(:checked) ~ #nav_hide, #nav_show_btn:checked ~ #nav_show {
+        display: none;
+    }
+    
+    #nav_show_btn:not(:checked) ~ div#nav_content {
+        display: none;
+    }
+    
+    #nav_show_btn:checked ~ div#nav_content {
+        display: grid;
+    } 
+}
+
+nav div#nav_content {
+    display: inline-flex;
+    background-color: var(--color1);
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    align-items: center;
+}
+
+nav div#nav_content a {
+    display: inline-block;
+
+    margin:0px;
+    padding:10px;
+
+    flex-basis: auto;
+    flex-grow: 1;
+
+    max-width: 250px;
+
+    text-shadow: 1px 1px 2px #000;
+    text-align: center;
+
+    transition-duration: 1s;
+}
+
+nav div#nav_content a:visited {
+    color: #088;
+}
+
+nav div#nav_content a:hover {
+    color: #fff;
+    transition-duration: 0.1s;
+}
+
+nav div#nav_content a {
+    color: #0ff;
+}
+
+@media screen and (max-width: 1000px)
+{
+    nav div#nav_content { /* изначальный вариант, если в навигации 4 элемента */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
+    }
+
+    nav div#nav_content[three_elems] { /* если в навигации 3 элемента */
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+}
+
+@media screen and (max-width: 767px)
+{
+    nav div#nav_content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+}
